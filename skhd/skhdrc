@@ -1,0 +1,67 @@
+# change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+#change focus between external displays (left and right)
+alt - s: yabai -m display --focus west
+alt - g: yabai -m display --focus east
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+ 
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - e : yabai -m space --balance
+
+# swap windows
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - h : yabai -m window --swap west
+shift + alt - l : yabai -m window --swap east
+
+# move window and split
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - h : yabai -m window --warp west
+
+# move window to display left and right
+shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
+shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
+
+#move window to prev and next space
+shift + alt - p : yabai -m window --space prev;
+shift + alt - n : yabai -m window --space next;
+
+# move window to space #
+shift + alt - 1 : yabai -m space --focus 1
+shift + alt - 2 : yabai -m space --focus 2
+shift + alt - 4 : yabai -m space --focus 4
+shift + alt - 5 : yabai -m space --focus 5
+shift + alt - 6 : yabai -m space --focus 6
+shift + alt - 3 : yabai -m space --focus 3
+# stop/start/restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+shift + alt - right : sketchybar --bar y_offset=-50; yabai -m config external_bar all:0:0;
+shift + alt - left : sketchybar --bar y_offset=2; yabai -m config external_bar all:30:0;
+ctrl + alt - right : sketchybar --reload
+ctrl + alt - up : sketchybar --bar y_offset=-40 ; yabai -m config external_bar all:0:0; yabai -m config top_padding=12
+ctrl + alt - down : sketchybar --bar y_offset=2 ; yabai -m config external_bar all:30:0; yabai -m config top_padding=10
+
+ctrl + alt - l : source ~/.zshrc; source ~/.config/sketchybar/colors.sh;  wallpaper ~/documents/wallpaper/wallpaper.png ; borders active_color=$RED ; borders inactive_color=$RED ; sketchybar --bar color=0xffB5E8E0 ; sketchybar --bar border_color=$RED ; skethcybar --defaults label.color=$BAR_COLOR ; sketchybar --set front_app label.color=$BAR_COLOR; sketchybar --set volume_icon label.color=$; sketchybar --set volume_icon icon.color=$BLUE; sketchybar --set spotify.back icon.color=$BAR_COLOR; sketchybar --set spotify.play icon.color=$BAR_COLOR; sketchybar --set spotify.next icon.color=$BAR_COLOR; sketchybar --set spotify.title label.color=$BAR_COLOR; sketchybar --set spotify.artist label.color=$RED; sketchybar --set separator icon.color=$BAR_COLOR; sketchybar --set battery icon.color=$BAR_COLOR; sketchybar --set cpu.top label.color=$BLACK; sketchybar --set calendar icon.color=$BAR_COLOR; sketchybar --set calendar label.color=$BAR_COLOR; sketchybar --remove brew; sketchybar --set space.1 icon.color=$BAR_COLOR; sketchybar --set space.2 icon.color=$BAR_COLOR; sketchybar --set space.3 icon.color=$BAR_COLOR; sketchybar --set space.4 icon.color=$BAR_COLOR; sketchybar --set space.5 icon.color=$BAR_COLOR; sketchybar --set space.6 icon.color=$BAR_COLOR; sketchybar --set space.7 icon.color=$BAR_COLOR; sketchybar --set space.8 icon.color=$BAR_COLOR; sketchybar --set github.bell label.color=$BAR_COLOR
+ctrl + alt - d : source ~/.zshrc ; wallpaper ~/documents/wallpaper/walpaper.png ; borders active_color=0xffeed49f ; borders inactive_color=0xffeed49f ; sketchybar --reload
