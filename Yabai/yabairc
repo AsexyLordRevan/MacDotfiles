@@ -36,10 +36,9 @@ yabai -m rule --add app="^(LuLu|Calculator|Software Update|Dictionary|VLC|System
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-
+# Window layout and borders
 yabai -m config window_shadow off
-borders active_color=0xffed8796 inactive_color=0xffed8796 width=5.5 hidpi=on  &
-
 yabai -m config layout bsp
+borders active_color=0xffed8796 inactive_color=0xffed8796 width=5.5 hidpi=on  &
 
 echo "yabai configuration loaded..."
