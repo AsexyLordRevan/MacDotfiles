@@ -57,4 +57,3 @@ do
 	esac
 done
 echo "Done. You need to finish up manually by following the instructions in the install guide (https://asexylordrevan/macdotfiles/install.txt)"
-echo "Or with "
