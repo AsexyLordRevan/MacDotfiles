@@ -8,6 +8,7 @@ if [-d "~/.config/yabai"]; then
     rm -rf ~/yabai
 fi
 git clone https://github.com/asexylordrevan/macdotfiles/yabai ~/.config/yabai
+yes | brew install borders
 yes | brew install koekeishiya/formulae/skhd
 if [-d "~/.config/skhd"]; then
     cp -r ~/.config/skhd ~/.config/skhd_backup
